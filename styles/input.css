@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body{
+    background-color: #EBCBB2;
+}
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+
+  h2,
+  h3 {
+    font-weight: 900;
+  }
+
+  h2 {
+    color: #EBCBB2;
+  }
+
+  h3,
+  p {
+    color: #3A6B3B;
+  }
+
+  p {
+    font-weight: 700;
+  }
+}
