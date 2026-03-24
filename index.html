@@ -12,17 +12,22 @@
   </head>
   <body>
     <header
-      class="relative w-full h-[300px] bg-[url('../assets/bg-header.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden"
+      class="relative w-full h-[300px] bg-cover bg-center bg-no-repeat overflow-hidden"
     >
-      <div class="absolute inset-0 bg-[#345334e5]"></div>
+      <div
+        class="absolute inset-0 bg-[url('../assets/bg-header.jpg')] bg-cover bg-center bg-no-repeat grayscale"
+      ></div>
+      <div class="absolute inset-0 bg-[#3A6B3BB2]"></div>
+
       <div
         class="relative z-10 w-full h-full flex items-center justify-between px-8"
       >
         <div>
           <div class="bg-[#EBCBB2] p-4 rounded-full ml-4">
-            <img src="assets/Logo Nikos.png" alt="Logo Nikos" width="200px" />
+            <img src="assets/Logo Nikos.png" alt="Logo Nikos" width="200" />
           </div>
         </div>
+
         <div class="flex gap-12 text-white text-5xl">
           <i class="fa-brands fa-whatsapp"></i>
           <i class="fa-brands fa-instagram"></i>
@@ -30,29 +35,556 @@
         </div>
       </div>
     </header>
+
     <main>
+      <!-- COMBOS -->
       <section
-        class="w-[85%] max-w-[1200px] h-[500px] mt-30 mx-auto bg-[#2e412e] rounded-[24px] p-[2px] flex flex-col"
+        class="carousel relative w-[85%] max-w-[1200px] h-[670px] mt-30 mx-auto bg-[#2e412e] rounded-[24px] p-[2px] flex flex-col"
       >
-        <div class="py-4.5">
+        <div class="py-6">
           <h2 class="text-center text-2xl tracking-[0.6em] leading-none">
             COMBOS
           </h2>
         </div>
 
-        <div class="flex-1 flex-row bg-white rounded-[24px] justify-center  flex gap-8 pt-5">
-          <div class="w-[270px] text-center">
-            <h3 class="mb-5">Combo Vegano</h3>
-            <div class="bg-[#EBCBB2] h-[350px] rounded-2xl">
-                <img src="assets/combo-vegano.jpg" alt="Combo Vegano" width="270px" height="300px" class="rounded-t-2xl"/>
-                <p>
-                    Pão artesanal, hambúrguer de grão de bico (100g), pasta de lentilha, cebola, tomate e molho de mostarda. Acompanha batata rústica e bebida.
-                </p>
+        <button
+          class="carousel-prev absolute left-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8592;
+        </button>
+
+        <button
+          class="carousel-next absolute right-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8594;
+        </button>
+
+        <div
+          class="flex-1 bg-white rounded-3xl overflow-hidden pt-10 pb-8 px-20"
+        >
+          <div class="carousel-viewport w-full h-full overflow-hidden">
+            <div
+              class="carousel-track flex gap-7 transition-transform duration-500 ease-in-out will-change-transform"
+            >
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Combo Vegano</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Combos/combo-vegano.jpg"
+                    alt="Combo Vegano"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Pão artesanal, hambúrguer de grão de bico (100g), pasta de
+                      lentilha, cebola, tomate e molho de mostarda. Acompanha
+                      batata rústica e bebida.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Combo Bacon</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Combos/combo-bacon.jpg"
+                    alt="Combo Bacon"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Pão com gergelim tostado, hambúrguer (100g), alface,
+                      tomate, molho de queijo cheddar, bacon e molho da casa.
+                      Acompanha batata rústica e bebida.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Combo X-Chicken</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Combos/combo-x-chicken.jpg"
+                    alt="Combo X-Chicken"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Pão com gergelim tostado, tiras de frango (100g), alface,
+                      tomate, picles, queijo prato e maionese caseira. Acompanha
+                      batata rústica e bebida.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Combo Onion Rings</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Combos/combo-onion-rings.jpg"
+                    alt="Combo Onion Rings"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Pão artesanal, hambúrguer (100g), onion rings, pasta de
+                      alho, tomate e alface. Acompanha batata rústica e bebida.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Combo Egg</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Combos/combo-egg.jpg"
+                    alt="Combo Egg"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Pão artesanal, hambúrguer (100g), dois ovos fritos, tomate
+                      e alface. Acompanha batata rústica e bebida.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACOMPANHAMENTOS -->
+      <section
+        class="carousel relative w-[85%] max-w-[1200px] h-[670px] mt-30 mx-auto bg-[#2e412e] rounded-[24px] p-[2px] flex flex-col"
+      >
+        <div class="py-6">
+          <h2 class="text-center text-2xl tracking-[0.6em] leading-none">
+            ACOMPANHAMENTOS
+          </h2>
+        </div>
+
+        <button
+          class="carousel-prev absolute left-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8592;
+        </button>
+
+        <button
+          class="carousel-next absolute right-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8594;
+        </button>
+
+        <div
+          class="flex-1 bg-white rounded-3xl overflow-hidden pt-10 pb-8 px-20"
+        >
+          <div class="carousel-viewport w-full h-full overflow-hidden">
+            <div
+              class="carousel-track flex gap-7 transition-transform duration-500 ease-in-out will-change-transform"
+            >
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Batata Trufada</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Acompanhamentos/batata-trufada.jpg"
+                    alt="Batata Trufada"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Batatas fritas cobertas com molho especial, toque trufado
+                      e finalização da casa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Batata com Cheddar e Bacon</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Acompanhamentos/batata-cheddar-bacon.jpg"
+                    alt="Onion Rings"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      250g de batatas fritas tradicionais, temperadas com sal,
+                      acompanhadas de cheddar e bacon.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Batata Rústica</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Acompanhamentos/batata-rustica.jpg"
+                    alt="Batata Rústica"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      250g de batatas assadas e finalizadas de forma rústica,
+                      temperadas com páprica e sal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Batata Smile</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Acompanhamentos/batata-smile.jpg"
+                    alt="Batata Smile"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      250g de batatas estilo smile, temperadas com sal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Batata Tradicional</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Acompanhamentos/batata-tradicional.jpg"
+                    alt="Batata Tradicional"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      250g de batatas fritas tradicionais, temperadas com lemon
+                      pepper e sal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- BEBIDAS -->
+
+      <section
+        class="carousel relative w-[85%] max-w-[1200px] h-[670px] mt-30 mx-auto bg-[#2e412e] rounded-[24px] p-[2px] flex flex-col"
+      >
+        <div class="py-6">
+          <h2 class="text-center text-2xl tracking-[0.6em] leading-none">
+            BEBIDAS
+          </h2>
+        </div>
+
+        <button
+          class="carousel-prev absolute left-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8592;
+        </button>
+
+        <button
+          class="carousel-next absolute right-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8594;
+        </button>
+
+        <div
+          class="flex-1 bg-white rounded-3xl overflow-hidden pt-10 pb-8 px-20"
+        >
+          <div class="carousel-viewport w-full h-full overflow-hidden">
+            <div
+              class="carousel-track flex gap-7 transition-transform duration-500 ease-in-out will-change-transform"
+            >
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Refrigerantes</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Bebidas/refrigerantes.jpg"
+                    alt="Refrigerantes"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Coca-cola (tradicional e zero), Guaraná, Fanta e Sprite.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Energéticos</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Bebidas/energeticos.jpg"
+                    alt="Energéticos"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">RedBull, TNT, Monster e Baly.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Sucos Naturais</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Bebidas/sucos-naturais.jpg"
+                    alt="Sucos"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Verificar com atendente/chat (sabores disponíveis de
+                      acordo com o estoque).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Cervejas</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Bebidas/cervejas.jpg"
+                    alt="Cervejas"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Original, Brahma, Heineken, Stella Artois, Corona e
+                      Budweiser.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Águas</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Bebidas/aguas.jpg"
+                    alt="Águas"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">Água mineral com e sem gás.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- SOBREMESAS -->
+
+      <section
+        class="carousel relative w-[85%] max-w-[1200px] h-[670px] mt-30 mx-auto bg-[#2e412e] rounded-[24px] p-[2px] flex flex-col"
+      >
+        <div class="py-6">
+          <h2 class="text-center text-2xl tracking-[0.6em] leading-none">
+            SOBREMESAS
+          </h2>
+        </div>
+
+        <button
+          class="carousel-prev absolute left-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8592;
+        </button>
+
+        <button
+          class="carousel-next absolute right-[-30px] top-[56%] -translate-y-1/2 z-20 w-[75px] h-[75px] rounded-full border border-[#2e412e] bg-[#f3f3ef] flex items-center justify-center text-[#2e412e] text-5xl cursor-pointer font-medium"
+        >
+          &#8594;
+        </button>
+
+        <div
+          class="flex-1 bg-white rounded-3xl overflow-hidden pt-10 pb-8 px-20"
+        >
+          <div class="carousel-viewport w-full h-full overflow-hidden">
+            <div
+              class="carousel-track flex gap-7 transition-transform duration-500 ease-in-out will-change-transform"
+            >
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Cookie</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Sobremesas/cookie.jpg"
+                    alt="Cookie"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Baunilha com chocolate, Chocolate com Chocolate Branco, Red Velvet e Caramelo Salgado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Brownie</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Sobremesas/brownie.jpg"
+                    alt="Brownie"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">Brownie tradicional e brownie com café.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Mini Churros</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Sobremesas/mini-churros.jpg"
+                    alt="Mini Churros"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Mini churros de doce de leite e de chocolate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Mini Torta de Limão</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Sobremesas/mini-torta-de-limao.jpg"
+                    alt="Mini Torta de Limão"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">
+                      Mini torta de limão (100g).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-67.5 text-center shrink-0">
+                <h3 class="mb-5">Mini Cheesecake</h3>
+                <div
+                  class="bg-[#EBCBB2] h-113.75 rounded-2xl overflow-hidden shadow-[3px_3px_10px_rgba(0,0,0,0.20)] flex flex-col"
+                >
+                  <img
+                    src="assets/Sobremesas/mini-cheesecake.jpg"
+                    alt="Mini Cheesecake"
+                    class="w-full h-[60%] object-cover object-center block rounded-2xl"
+                  />
+                  <div
+                    class="flex-1 flex items-center justify-center px-5 py-5"
+                  >
+                    <p class="text-center">Mini cheesecake (100g).</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+
+    <footer class="w-67.5 fixed bottom-0 z-40 flex items-center justify-center bg-[#2E412E] h-20 rounded-t-3xl">
+      <button class="flex items-center gap-3 text-[#2E412E] font-medium text-[30px]">
+        <i class="fa-solid fa-basket-shopping text-[#EBCBB2]"></i>
+        <p class="text-[#EBCBB2] font-normal">Ver Sacola</p>
+      </button>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

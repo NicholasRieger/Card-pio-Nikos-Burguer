@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    gap: 0;
+    width: fit-content;
+}
+
+.grid-container > div{
+    border: 1px solid black;
+    background-color: rgba(60, 60, 108, 0.985);
+    height: 50px;
+}
+
+header{
+    background-color: rgb(116, 116, 32);
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.titulo-calendario{
+    text-align: center;
+}
