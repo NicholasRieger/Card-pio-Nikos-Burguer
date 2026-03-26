@@ -76,16 +76,23 @@ const footer = document.getElementById("site-footer");
 const observer = new IntersectionObserver(
   ([entry]) => {
     if (entry.isIntersecting) {
-      cartBar.classList.add("opacity-0", "translate-y-full", "pointer-events-none");
-      cartBar.classList.remove("-translate-x-1/2");
+      cartBar.classList.add("translate-y-full", "pointer-events-none");
+      cartBar.classList.remove(
+        "-translate-x-1/2",
+        "shadow-[0px_-4px_10px_rgba(0,0,0,0.6)]",
+      );
       cartBar.classList.add("-translate-x-1/2");
     } else {
-      cartBar.classList.remove("opacity-0", "translate-y-full", "pointer-events-none");
+      cartBar.classList.remove(
+        "translate-y-full",
+        "pointer-events-none",
+      );
+      cartBar.classList.add("-translate-x-1/2", "shadow-[0px_-4px_10px_rgba(0,0,0,0.6)]");
     }
   },
   {
     threshold: 0.1,
-  }
+  },
 );
 
 observer.observe(footer);
