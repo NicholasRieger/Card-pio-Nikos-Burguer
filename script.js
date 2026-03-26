@@ -69,3 +69,23 @@ carousels.forEach((carousel) => {
 
   updateCarousel();
 });
+
+const cartBar = document.getElementById("cart-bar");
+const footer = document.getElementById("site-footer");
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      cartBar.classList.add("opacity-0", "translate-y-full", "pointer-events-none");
+      cartBar.classList.remove("-translate-x-1/2");
+      cartBar.classList.add("-translate-x-1/2");
+    } else {
+      cartBar.classList.remove("opacity-0", "translate-y-full", "pointer-events-none");
+    }
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+observer.observe(footer);

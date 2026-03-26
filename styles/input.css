@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-body{
-    background-color: #EBCBB2;
-}
-
 @layer base {
   body {
     font-family: "Inter", sans-serif;
